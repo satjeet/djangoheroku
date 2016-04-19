@@ -16,7 +16,11 @@ from django.core.urlresolvers import reverse_lazy
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+STATIC_ROOT = 'staticfiles'
+STATIC_URL ='/static/'
+STATICFILES_DIRS = (
+os.path.join(BASE_DIR, 'static'),
+)
 LOGIN_REDIRECT_URL= reverse_lazy('index')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logouto')
